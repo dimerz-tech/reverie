@@ -1,6 +1,27 @@
 ---
 layout: default
 ---
+<script type="text/x-mathjax-config">
+var font = "Neo-Euler";
+MathJax.Hub.Config({
+	tex2jax: {
+		inlineMath: [['$','$']],
+		displayMath: [['\\[','\\]']],
+		processEscapes: true,
+	},
+	"SVG":{ 
+		font:font
+	},
+	"HTML-CSS": {
+		webFont: font,
+		imageFont: font,
+		preferredFont: font,
+		availableFonts: [],
+		scale: 85,
+		mtextFontInherit: true
+	}
+}); </script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
 <article class="post detailed">
   <h1>{{ page.title }}</h1>
@@ -37,4 +58,3 @@ layout: default
 
   {% include disqus.html %}
 </article>
-{% include mathjax.html %}
